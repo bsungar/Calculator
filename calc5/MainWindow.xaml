@@ -1,0 +1,52 @@
+﻿<Window x:Class="calc5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calc5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="530" Width="330">
+
+    <Window.Resources>
+        <SolidColorBrush Color="Coral" x:Key="cor"/>
+        <SolidColorBrush Color="Purple" x:Key="purp"/>
+        <SolidColorBrush Color="DarkGreen" x:Key="dg"/>
+    </Window.Resources>
+    <Grid Margin="10" Background="Lavender">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="resultText" Text="0" Grid.ColumnSpan="4" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="60"/>
+        <Button x:Name="acButton"  Content="AC" BorderBrush="{StaticResource purp}" Grid.Row="1" Margin="5" Click="AcButton_Click"/>
+        <Button x:Name="negativeButton" Click="NegativeButton_Click"  BorderBrush="{StaticResource purp}" Content="+/-" Grid.Row="1" Grid.Column="2" Margin="5"/>
+        <Button x:Name="CButton" Click="CButton_Click" BorderBrush="{StaticResource purp}" Content="C" Grid.Row="1" Grid.Column="1" Margin="5"/>
+        <Button x:Name="divisionButton" Click="divisionButton_Click" BorderBrush="{StaticResource purp}"  Content="/" Grid.Row="1" Grid.Column="3" Margin="5"/>
+        <Button x:Name="sevenButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="7" Grid.Row="2" Grid.Column="0" Margin="5" />
+        <Button x:Name="eightButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="8" Grid.Row="2" Grid.Column="1" Margin="5"/>
+        <Button x:Name="nineButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="9" Grid.Row="2" Grid.Column="2" Margin="5"/>
+        <Button x:Name="multiplicationButton" BorderBrush="{StaticResource purp}" Click="multiplicationButton_Click"  Content="*" Grid.Row="2" Grid.Column="3" Margin="5"/>
+        <Button x:Name="fourButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="4" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <Button x:Name="fiveButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}"  Content="5" Grid.Row="3" Grid.Column="1" Margin="5"/>
+        <Button x:Name="sixButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="6" Grid.Row="3" Grid.Column="2" Margin="5"/>
+        <Button x:Name="substractionButton" BorderBrush="{StaticResource purp}" Click="substractionButton_Click"  Content="-" Grid.Row="3" Grid.Column="3" Margin="5"/>
+        <Button x:Name="oneButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="1" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <Button x:Name="twoButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="2" Grid.Row="4" Grid.Column="1" Margin="5"/>
+        <Button x:Name="threeButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="3" Grid.Row="4" Grid.Column="2" Margin="5"/>
+        <Button x:Name="plusButton" BorderBrush="{StaticResource purp}" Click="plusButton_Click" Content="+" Grid.Row="4" Grid.Column="3" Margin="5"/>
+        <Button x:Name="zeroButton" Click="NumberButton_Click" BorderBrush="{StaticResource cor}" Content="0" Grid.Row="5" Grid.ColumnSpan="2" Margin="5"/>
+        <Button x:Name="dotButton" BorderBrush="{StaticResource purp}" Click="DotButton_Click"  Content="." Grid.Row="5" Grid.Column="2" Margin="5,5,6,0" Height="60" VerticalAlignment="Top"/>
+        <Button x:Name="equalButton"  BorderBrush="{StaticResource purp}" Click="EqualButton_Click" Content="=" Grid.Row="5" Grid.Column="3" Margin="5"/>
+    </Grid>
+</Window>
+
